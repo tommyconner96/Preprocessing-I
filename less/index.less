@@ -5,6 +5,24 @@
 */
 // @text-color: green;
 
+
+@bigfont: 3em;
+@mediumfont: 2em;
+
+.buttonpressed {
+	@media (min-width: 501px){
+	&:hover {
+	color:black;
+	background-color: blanchedalmond;}
+}
+}
+
+.pagewidth {
+	margin-left: 4em;
+	margin-right: 4em;
+}
+
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -47,7 +65,6 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
-	background-color: green;
 }
 
 th, td {
@@ -66,3 +83,100 @@ html, body {
 	// color: @text-color;
 }
 
+h1 {
+	font-size: @bigfont;
+}
+
+h2 {
+	font-size: @mediumfont;
+}
+
+.container {
+	width:74%;
+	margin-left: 13%;
+	margin-right: 13%;
+	@media (max-width:500px) {
+		width: 90%;
+		margin-left: 1em;
+		margin-right: 1em;
+	}
+	.nav-container {
+		display: flex;
+	.topnav {
+		padding: 2em;
+		@media (max-width: 500px) {
+			padding:0%;
+		}
+
+		a {
+			padding: 1em;
+			color: gray;
+			text-align: center;
+			text-decoration: none;
+			font-size: 1.5em;
+			.buttonpressed();
+		}
+	}
+	}
+
+	.intro {
+	background-color: #D3D3D3;
+		.intro-container {
+			.pagewidth();
+		}
+	p {
+		padding-left:1em;
+	}
+		img {
+			padding:1em;
+		}
+		button {
+			background-color: lightblue;
+			border: none;
+			color: black;
+			padding: .5em 1em;
+			margin: 1em .5em;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 1.5em;
+			.buttonpressed();
+		}
+	}
+	.main {
+		display: flex;
+		background-color: #f0f0f0;
+
+		.content {
+			width:50%;
+			.pagewidth();
+		}
+
+		.list {
+			width:50%;
+
+			ul {
+				margin-top:1.5em;
+				list-style-type: square;
+			}
+			li {
+				padding-top: 1em;
+				padding-bottom: 1em;
+			}
+
+
+
+		}
+	}
+
+	.work-history {
+		background-color: #fcf9f8;
+		font-size:1.5em;
+		
+	}
+
+	.contact {
+		text-align: center;
+		line-height: 2em;
+	}
+}
