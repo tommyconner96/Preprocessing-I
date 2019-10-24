@@ -12,6 +12,10 @@
   margin-left: 4em;
   margin-right: 4em;
 }
+.pagewidth-mobile {
+  margin-left: 1em;
+  margin-right: 1em;
+}
 html,
 body,
 div,
@@ -141,6 +145,12 @@ td {
   padding: 15px;
   text-align: left;
 }
+@media (max-width: 500px) {
+  th,
+  td {
+    padding: 5px;
+  }
+}
 /* Set every element's box-sizing to border-box */
 * {
   box-sizing: border-box;
@@ -221,17 +231,41 @@ h2 {
     background-color: blanchedalmond;
   }
 }
+.container .intro button a {
+  text-decoration: none;
+  color: black;
+}
 .container .main {
   display: flex;
   background-color: #f0f0f0;
+}
+@media (max-width: 500px) {
+  .container .main {
+    flex-direction: column;
+  }
 }
 .container .main .content {
   width: 50%;
   margin-left: 4em;
   margin-right: 4em;
 }
+@media (max-width: 500px) {
+  .container .main .content {
+    width: 90%;
+    margin-left: 1em;
+    margin-right: 1em;
+    padding-bottom: 2em;
+  }
+}
 .container .main .list {
   width: 50%;
+}
+@media (max-width: 500px) {
+  .container .main .list {
+    width: 90%;
+    margin-left: 1em;
+    margin-right: 1em;
+  }
 }
 .container .main .list ul {
   margin-top: 1.5em;
