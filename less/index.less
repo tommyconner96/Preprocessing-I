@@ -22,6 +22,11 @@
 	margin-right: 4em;
 }
 
+.pagewidth-mobile {
+	margin-left: 1em;
+	margin-right: 1em;	
+}
+
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -70,6 +75,9 @@ table {
 th, td {
 	padding: 15px;
 	text-align: left;
+	@media (max-width: 500px){
+		padding: 5px;
+	}
 
   }
 
@@ -102,6 +110,7 @@ h2 {
 	}
 	.nav-container {
 		display: flex;
+
 	.topnav {
 		padding: 2em;
 		@media (max-width: 500px) {
@@ -115,6 +124,7 @@ h2 {
 			text-decoration: none;
 			font-size: 1.5em;
 			.buttonpressed();
+
 		}
 	}
 	}
@@ -130,7 +140,7 @@ h2 {
 		img {
 			padding:1em;
 		}
-		button {
+		button{
 			background-color: lightblue;
 			border: none;
 			color: black;
@@ -141,19 +151,34 @@ h2 {
 			display: inline-block;
 			font-size: 1.5em;
 			.buttonpressed();
+			a {
+				text-decoration: none;
+				color:black;
+			}
 		}
 	}
 	.main {
 		display: flex;
 		background-color: #f0f0f0;
-
+		@media (max-width: 500px) {
+			flex-direction: column;
+		}
 		.content {
 			width:50%;
 			.pagewidth();
+			@media (max-width: 500px) {
+				width:90%;
+				.pagewidth-mobile();
+				padding-bottom: 2em;
+			}
 		}
 
 		.list {
 			width:50%;
+			@media (max-width: 500px) {
+				width:90%;
+				.pagewidth-mobile();
+			}
 
 			ul {
 				margin-top:1.5em;
